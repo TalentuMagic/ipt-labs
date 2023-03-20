@@ -8,6 +8,8 @@
 <div th:each="product : ${products}">
     <span th:text="${product.id}">id</span>
     <span th:text="${product.name}">name</span>
+    <span th:text="${product.category}">category</span>
+    <span th:text="${product.price}">price</span>
 </div>
 </body>
 </html>

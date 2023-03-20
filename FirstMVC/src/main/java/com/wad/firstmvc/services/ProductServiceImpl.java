@@ -9,11 +9,9 @@ import java.util.List;
 @Service
 public class ProductServiceImpl implements ProductService {
     List<Product> products = new ArrayList(List.of(
-            new Product(13L, "ice cream"),
-            new Product(15L, "bike"),
-            new Product(19L, "car"))
-    );
-
+            new Product(13L, "ice cream", "food", 13),
+            new Product(15L, "bike", "sports", 335),
+            new Product(19L, "car", "Cars", 5340)));
 
     @Override
     public List<Product> findAll() {
