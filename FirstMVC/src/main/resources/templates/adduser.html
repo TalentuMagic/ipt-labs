@@ -2,15 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Add new product</title>
+    <title>Add new user</title>
 </head>
 <body>
-<!--action is by default POST /products/new -->
-<form th:object="${product}" method="post">
+<!--action is by default POST /users/new -->
+<form th:object="${user}" method="post">
     <input th:field="*{id}" placeholder="ID">
     <input th:field="*{name}" placeholder="Name">
-    <input th:field="*{price}" placeholder="Price">
-    <input th:field="*{category}" placeholder="Category">
+    <input th:field="*{age}" placeholder="Age">
     <input type="submit">
 </form>
 </body>
