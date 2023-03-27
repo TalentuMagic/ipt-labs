@@ -5,11 +5,30 @@
     <title>View Products</title>
 </head>
 <body>
-<div th:each="product : ${products}">
+<table>
+    <thread>
+        <tr>
+            <th>ID</th>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thread>
+    <tbody>
+        <tr th:each="product : ${products}">
+            <th th:text="${product.id}">id</th>
+            <th th:text="${product.name}">name</th>
+            <th th:text="${product.category}">category</th>
+            <th th:text="${product.price}">price</th>
+        </tr>
+    </tbody>
+</table>
+<!--/* old way of showing table contents 
+{% comment %} <div th:each="product : ${products}">
     <span th:text="${product.id}">id</span>
     <span th:text="${product.name}">name</span>
     <span th:text="${product.category}">category</span>
     <span th:text="${product.price}">price</span>
-</div>
+</div> */-->
 </body>
 </html>

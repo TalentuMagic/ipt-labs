@@ -1,6 +1,5 @@
 package com.wad.firstmvc.controllers;
 
-
 import com.wad.firstmvc.domain.Product;
 import com.wad.firstmvc.services.ProductService;
 import org.springframework.stereotype.Controller;
@@ -20,26 +19,25 @@ public class ProductController {
         this.productService = productService;
     }
 
-
-    //-populate the model with the retrieved products!
-    //-select the appropriate view (navigation)
+    // -populate the model with the retrieved products!
+    // -select the appropriate view (navigation)
     @GetMapping
-    public String viewProducts(Model model){
-        model.addAttribute("products",productService.findAll());
+    public String viewProducts(Model model) {
+        model.addAttribute("products", productService.findAll());
         return "products";
     }
 
     @GetMapping("/new")
-    public String showAddProductForm(Model model){
-        model.addAttribute("product",new Product());
+    public String showAddProductForm(Model model) {
+        model.addAttribute("product", new Product());
         return "addproducts";
     }
 
     @PostMapping("/new")
-    public String addProduct(Product product){
-        if(product.getId()==null)
+    public String addProduct(Product product) {
+        if (product.getId() == null)
             product.setId(new Random().nextLong());
-        productService.save(product);
+        productService.saveProduct(product);
         return "redirect:/products";
     }
 

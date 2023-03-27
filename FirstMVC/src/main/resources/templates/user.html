@@ -5,10 +5,31 @@
     <title>View Users</title>
 </head>
 <body>
+<table>
+    <thread>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+    </thread>
+    <tbody>
+        <tr th:each="user : ${user}">
+            <th th:text="${user.id}">id</th>
+            <th th:text="${user.username}">username</th>
+            <th th:text="${user.name}">name</th>
+            <th th:text="${user.email}">email</th>
+            <th th:text="${user.age}">age</th>
+        </tr>
+    </tbody>
+</table>
+<!--/* old way of showing table contents
 <div th:each="user : ${user}">
     <span th:text="${user.id}">id</span>
     <span th:text="${user.name}">name</span>
     <span th:text="${user.age}">age</span>
-</div>
+</div> */-->
 </body>
 </html>

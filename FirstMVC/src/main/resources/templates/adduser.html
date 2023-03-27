@@ -8,7 +8,9 @@
 <!--action is by default POST /users/new -->
 <form th:object="${user}" method="post">
     <input th:field="*{id}" placeholder="ID">
+    <input th:field="*{username}" placeholder="Username">
     <input th:field="*{name}" placeholder="Name">
+    <input th:field="*{email}" placeholder="Email">
     <input th:field="*{age}" placeholder="Age">
     <input type="submit">
 </form>
