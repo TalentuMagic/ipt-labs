@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.wad.firstmvc.domain.User;
 
+// course implementation (NOT WORKING)
 // public interface UserRepository extends CrudRepository<User, Long> {
 //     List<User> findAll(); // overrides findAll to return a List
 
