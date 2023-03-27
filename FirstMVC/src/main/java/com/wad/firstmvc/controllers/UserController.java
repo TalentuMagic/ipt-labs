@@ -37,7 +37,7 @@ public class UserController {
     public String addUser(User user) {
         if (user.getId() == null)
             user.setId(new Random().nextLong());
-        userService.save(user);
+        userService.saveUser(user);
         return "redirect:/user";
     }
 

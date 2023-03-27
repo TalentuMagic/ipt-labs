@@ -16,18 +16,24 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String username;
     private String name;
     private String email;
     private int age;
 
     // the constructor for the domain
-    public User(String name, String email, int age) {
+    public User(String username, String name, String email, int age) {
+        this.username = username;
         this.name = name;
         this.age = age;
         this.email = email;
     }
 
     // getters
+    public String getUsername() {
+        return username;
+    }
+
     public String getName() {
         return name;
     }
@@ -41,6 +47,10 @@ public class User {
     }
 
     // setters
+    public void setUsername(String inputUsername) {
+        username = inputUsername;
+    }
+
     public void setName(String inputName) {
         name = inputName;
     }
@@ -52,4 +62,5 @@ public class User {
     public void setAge(int inputAge) {
         age = inputAge;
     }
+
 }

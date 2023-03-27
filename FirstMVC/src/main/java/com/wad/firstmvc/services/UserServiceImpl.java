@@ -25,6 +25,7 @@ import org.springframework.stereotype.Service;
 //         users.add(p);
 //     }
 // }
+
 @Service
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
@@ -34,8 +35,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User save(User f) {
-        return userRepository.save(f);
+    public User saveUser(User user) {
+        return userRepository.save(user);
     }
 
     @Override
@@ -44,17 +45,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> findUserByName(String name) {
+    public User findUserByName(String name) {
         return userRepository.findByName(name);
     }
 
     @Override
-    public List<User> findUserByEmail(String email) {
+    public User findUserByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 
     @Override
-    public List<User> findUserByAge(int age) {
+    public User findUserByAge(int age) {
         return userRepository.findByAge(age);
     }
 }
