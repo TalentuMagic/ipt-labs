@@ -1,7 +1,8 @@
 # ipt-labs
 Lab work and HW for the Internet Programming Technologies Course<br/>
 Finished Lab2, with HW2 completed - HW2=creating persistent data connection with the MySQL server using JRA CRUD ops<br/>
-Lab3:<br>
+
+<strong>Lab3:</strong><br>
 In this exercise we will use Spring Data JPA to access the database. Implement the above domain model as entity classes. Populate (from Java) the entities with meaningful data. Test by retrieving objects from the database using their ids (see the course, SpringData project on github https://github.com/andraevs/wad2022). Solve the following queries in JPQL. Display the results.<br>
 1) Given patient ID -> all health issues AND  all health issues which have at least a health service<br>
 2) Given the date -> all patients who had a medical encounter that date<br>
